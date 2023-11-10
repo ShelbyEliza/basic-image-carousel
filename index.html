@@ -7,24 +7,33 @@
     <title>Image Carousel</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
     <section class="carousel" aria-label="Crow Photos">
       <div class="carousel" data-carousel>
         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-        <ul data-slides>
-          <li class="slide" data-active>
-            <img src="./images/crow_1.jpg" alt="Blue crow looking over its shoulder toward the camera">
-          </li>
-          <li class="slide">
-            <img src="./images/crow_2.jpg" alt="Crow cawing at dawn">
-          </li>
-          <li class="slide">
-            <img src="./images/crow_3.jpg" alt="Crow swooping downwards in a blue sky">
-          </li>
-        </ul>
+        <div class="slides-and-circles">
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="./images/crow_1.jpg" alt="Blue crow looking over its shoulder toward the camera">
+            </li>
+            <li class="slide">
+              <img src="./images/crow_2.jpg" alt="Crow cawing at dawn">
+            </li>
+            <li class="slide">
+              <img src="./images/crow_3.jpg" alt="Crow swooping downwards in a blue sky">
+            </li>
+          </ul>
+          <div class="queue">
+            <ul data-circles>
+              <li class="circle" data-active><i class='bx bxs-circle'></i></li>
+              <li class="circle"><i class='bx bxs-circle'></i></li>
+              <li class="circle"><i class='bx bxs-circle'></i></li>
+            </ul>
+          </div>
+        </div>
         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
       </div>
     </section>
