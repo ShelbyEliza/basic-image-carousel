@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;700&family=Lato:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+	--mimi-pink: #ffddea;
+	--melting-glacier: #ebfdf6;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+	background-color: var(--mimi-pink);
+}
+
+a {
+	text-decoration: none;
+}
+.slide > img {
+	display: block;
+	width: 100%;
+	max-height: 311px;
+	object-fit: cover;
+	object-position: center;
+	border: 1px solid black;
+}
+.carousel {
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+}
+.carousel > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.slide {
+	inset: 0;
+	opacity: 0;
+	display: none;
+}
+
+.slide[data-active] {
+	opacity: 1;
+	display: block;
+}
+.carousel-button {
+	/* position: absolute; */
+	z-index: 2;
+
+	background: none;
+	border: none;
+	font-size: 4rem;
+	top: 50%;
+	cursor: pointer;
+	/* transform: translateY(-50%); */
+}
+.prev {
+	padding-left: 2rem;
+}
+.next {
+	padding-right: 2rem;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 1fr 0.4fr auto 1fr;
+
+	text-align: center;
+	color: black;
+}
+
+nav,
+.sidebar,
+article {
+	color: black;
+	border: 1px solid black;
+}
+
+header {
+	border: 1px solid black;
+	grid-column: 1 / 3;
+	font-family: 'Expletus Sans', sans-serif;
+}
+
+.sidebar {
+	grid-row: 2 / 4;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1rem;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+article h2 {
+	margin: 0.8rem;
+}
+
+article p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+
+	color: black;
+	text-align: left;
+
+	overflow: auto;
+	max-width: 50ch;
+
+	margin: 0.4rem 0rem;
+}
+
+footer {
+	background-color: var(--melting-glacier);
+	grid-column: 1 / 3;
+}
